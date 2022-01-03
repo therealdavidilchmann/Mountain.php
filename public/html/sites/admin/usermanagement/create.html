@@ -1,0 +1,25 @@
+{% setvar title => admin %}
+{% extend sites/admin/layout@container %}
+
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">Benutzer - Neuen Benutzer erstellen</h5>
+        <hr>
+        <div>
+            <form method="post" action="/index.php/admin/usermanagement/create">
+                <input type="hidden" name="format" value="s" id="content-format">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="username" name="username" placeholder="Benutzername">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Passwort">
+                </div>
+                <div id="all-content"></div>
+                <div class="row justify-content-center">
+                    <button type="button" class="btn btn-success ml-2 mr-2" onclick="addTextfield('right')">Recht hinzufügen</button>
+                </div>
+                <button type="submit" class="btn btn-primary">Erstellen</button>
+            </form>
+        </div>
+    </div>
+</div>

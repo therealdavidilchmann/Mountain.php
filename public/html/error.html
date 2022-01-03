@@ -1,0 +1,9 @@
+{% setvar title => Error %}
+{% setvar metaDescription => Error %}
+{% extend layout@container %}
+
+<div style="text-align: center;">
+    <h1>Error {% getvar code %}!</h1>
+    <h3>{% getvar message %}</h3>
+    <button onclick="window.history.go(-1)">Zurück</button>
+</div>
