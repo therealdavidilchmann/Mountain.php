@@ -1,0 +1,12 @@
+{% setvar title => Pagetitle %}
+{% extend layout@container %}
+
+<div>
+    {% getvar a %}
+</div>
+
+<script>
+    function refresh() {
+        location.href = "{% getvar loginSuccessRedirect ?? /index.php/ %}";
+    }
+</script>
